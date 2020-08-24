@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+            margin: 0;
+            background-color: rgb(238, 252, 255);
+            font-family: copperplate
+            }
+            .content-section {
+            background: #ffffff;
+            padding: 10px 20px;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            margin: 20px;
+            }
+            .navbar {
+            width: 100%;
+            background-color: rgb(198, 239, 255);
+            overflow: auto;
+            }
+            .topnav {
+            padding: 14px 16px;
+            overflow: hidden;
+            background-color: rgb(198, 246, 255);
+            text-align: center;
+            word-spacing: 20px;
+            }
+            .topnav a {
+                text-decoration: none;
+                font-size: 20px;
+                text-align: center;
+                color:black
+            }
+            footer {
+                display: block;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: rgb(255, 182, 182);
+                color: white;
+                text-align: center;
+            }
+        </style>
+        
+        {% if title %}
+        <title>COVID - {{ title }}</title>
+        {% else %}
+        <title>COVID App</title>
+        {% endif %}
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                ●▬▬▬▬▬๑۩ 
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                ۩๑▬▬▬▬▬●  
+            </div>
+        </header>
+        <div class="content-section">
+            {% block content %}{% endblock content %}
+        </div>
+        <footer>
+            <div class="topnav">
+                ●▬▬▬๑۩   ●   ۩๑▬▬▬●  
+            </div>
+        </footer>
+    </body>
+</html>
